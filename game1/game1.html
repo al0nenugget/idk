@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game 1 - UNBLOCKED GAMES 1000-7</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, rgba(18, 18, 18, 0.8), rgba(255, 0, 0, 0.7)), 
+                        url('https://www.transparenttextures.com/patterns/black-paper.png');
+            background-blend-mode: multiply;
+            color: #ff4545;
+        }
+
+        nav {
+            width: 100%;
+            background-color: rgba(26, 26, 26, 0.95);
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav img {
+            width: 100px;
+            height: auto;
+        }
+
+        .game-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 100px;
+            animation: colorChange 3s infinite;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes colorChange {
+            0% { color: #ff4545; }
+            33% { color: #ffffff; }
+            66% { color: #ff9f45; }
+            100% { color: #ff4545; }
+        }
+
+        .ad-space {
+            background-color: #333;
+            height: 100px;
+            width: 100%;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ff4545;
+            font-size: 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .game-embed {
+            margin: 20px auto;
+            max-width: 800px;
+            width: 100%;
+            height: 600px;
+            background-color: #000;
+            border: 2px solid #ff4545;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .game-embed:hover {
+            transform: scale(1.02);
+        }
+
+        .game-description {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .fullscreen-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            background-color: #ff4545;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease;
+        }
+
+        .fullscreen-button:hover {
+            background-color: #ff9f45;
+        }
+
+        @media (max-width: 768px) {
+            .game-title {
+                font-size: 2.5rem;
+            }
+
+            .ad-space {
+                height: 80px;
+                font-size: 1.2rem;
+            }
+
+            .game-description {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                margin-right: 10px;
+            }
+
+            .game-title {
+                font-size: 2rem;
+            }
+
+            .ad-space {
+                height: 60px;
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .game-description {
+                font-size: 0.9rem;
+            }
+
+            .fullscreen-button {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/index.html">
+            <img src="IMG_2775.jpeg" alt="Back to Home">
+        </a>
+    </nav>
+
+    <div class="game-title">MiniDayZ+</div>
+
+    <div class="ad-space">
+        Ad Space - Your ad here!
+    </div>
+
+    <div class="container">
+        <!-- Embedded Game -->
+        <div class="game-embed">
+            <iframe src="your-game-link.html" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+
+        <!-- Full Screen Button -->
+        <button class="fullscreen-button" onclick="openFullScreen()">Play in Full Screen</button>
+
+        <!-- Game Description -->
+        <div class="game-description">
+            <p>Enjoy playing MiniDayZ+! It's a fun and engaging game that will keep you entertained for hours. Follow the instructions and have a great time! <strong>Notice if you have any problem try reloading the page</p>
+        </div>
+    </div>
+
+    <script>
+        function openFullScreen() {
+            const gammaValue = 1.0; // Set your gamma value here
+            window.open('full.html?gamma=' + gammaValue, '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -8,8 +8,11 @@ function closeModal() {
     document.getElementById('settingsModal').style.display = 'none';
 }
 
-// Save settings function (add your logic here)
+// Save settings and change color scheme
 function saveSettings() {
+    const selectedColor = document.getElementById('colorPicker').value;
+    changeColorScheme(selectedColor);
+    localStorage.setItem('colorScheme', selectedColor); // Save color choice
     alert('Settings saved!');
     closeModal();
 }
@@ -17,13 +20,26 @@ function saveSettings() {
 // Attach click event to the floating button
 document.querySelector('.floating-button').onclick = openModal;
 
-function toggleSettings() {
-    const modal = document.getElementById('settingsModal');
-    modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+// Change color scheme based on the selected color
+function changeColorScheme(color) {
+    document.documentElement.style.setProperty('--primary-color', color);
 }
 
-// Change background color based on color picker
+// Load saved color scheme on page load
+window.onload = function() {
+    const savedColorScheme = localStorage.getItem('colorScheme');
+    if (savedColorScheme) {
+        changeColorScheme(savedColorScheme);
+    }
+}
+
+// Event listener for color picker
 document.getElementById('colorPicker').addEventListener('input', function() {
-    document.body.style.backgroundColor = this.value;
+    changeColorScheme(this.value);
 });
+
+function changeColorScheme(newColor) {
+  document.documentElement.style.setProperty('--primary-color', newColor);
+  document.documentElement.style.setProperty('--shadow-color', newColor + '80'); // Example of changing shadow color
+}
 

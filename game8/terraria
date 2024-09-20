@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Game Embed</title>
+</head>
+<body>
+    <h1>Enjoy This Game!</h1>
+    <div style="text-align: center;">
+        <iframe src="https://scratch.mit.edu/projects/322341152/embed" 
+                allowtransparency="true" 
+                width="485" 
+                height="402" 
+                frameborder="0" 
+                scrolling="no" 
+                allowfullscreen>
+        </iframe>
+    </div>
+</body>
+</html>
